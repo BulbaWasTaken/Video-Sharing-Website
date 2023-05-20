@@ -1,0 +1,96 @@
+<main class="main-content">
+  <form class="upload-register-form" id="reg-form" action="/users/register" method="POST" enctype="application/x-www-form-urlencoded">
+    <fieldset>
+      <legend>Register</legend>
+      <div class="error-message" id="error-message"></div>
+      <div class="input-group">
+        <label for="username">Username:</label>
+        <input
+          class="input-text"
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Username"
+          autocomplete="off" 
+        />
+        <div class="validation username-validation" id ="username-validation">
+          <ul>
+            <li id="lengthReq"></li>
+            <li id="firstChar"></li>
+          </ul>
+        </div>
+
+        <label for="email">Email:</label>
+        <input
+          class="input-text"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          autocomplete="off" 
+        />
+        <div class="validation email-validation" id= "email-validation">
+          <ul>
+            <li id="validEmail"></li>
+          </ul>
+        </div>
+
+        <label for="password">Password:</label>
+        <input
+          class="input-text"
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          autocomplete="off" 
+        />
+
+        <div class="validation password-validation" id = "password-validation">
+          <ul>
+            <li id="length"></li>
+            <li id="upper"> </li>
+            <li id="number"></li>
+            <li id="special"></li>
+          </ul>
+        </div>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input
+          class="input-text"
+          type="password"
+          name="confirmPassword"
+          id="confirmPassword"
+          placeholder="Password"
+          autocomplete="off" 
+        />
+        <div class="validation confirmPass-validation" id ="confirmPass-validation">
+          <ul>
+            <li id="passConfirm">Password does not Match</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="checkbox-group">
+        <label>
+          <input type="checkbox" name="ageCheck" id="ageCheck"/>
+          Are you 13+ years of age?
+        </label>
+
+        <label>
+          <input
+            type="checkbox"
+            name="agreeTOS"
+            id="agreeTOSAndPrivacyRules"
+          />
+          Do you accept the
+          <a href="#">Privacy Rules</a>
+          and
+          <a href="#">Terms of Service</a>?
+        </label>
+      </div>
+    </fieldset>
+    <div class="submit-buttons">
+      <input class="form-button" type="submit" value="Register" />
+    </div>
+  </form>
+</main>

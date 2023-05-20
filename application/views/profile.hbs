@@ -1,0 +1,14 @@
+<main class="main-content">
+  <div class="userProfile">
+    <div class="user-information">
+      <div class= "profile-username">{{user.username}}</div>
+      <div class= "profile-email">{{user.email}}</div>
+    </div>
+
+    <div class="profile-posts">
+      {{#each postsByUser}}
+        {{>profilePost this}}
+      {{/each}}
+    </div>
+  </div>
+</main>

@@ -1,0 +1,32 @@
+<main class="main-content">
+  <form class="login-form" id="login-form" action="/users/login" method="POST" enctype="application/x-www-form-urlencoded">
+    <fieldset>
+      <legend>Login</legend>
+      <div class="input-group">
+        <label for="username">Username:</label>
+        <input
+          class="input-text"
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Username"
+          autocomplete="off" 
+        />
+
+        <label for="password">Password:</label>
+        <input
+          class="input-text"
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          autocomplete="off" 
+        />
+      </div>
+      <div class = "make-account" id = "make-account">
+        Do not have an account? <a href="/register">Register here!</a></li>
+      </div>
+    </fieldset>
+    <div class="submit-buttons"><input class="form-button" type="submit" value="Login"/></div>
+  </form>
+</main>

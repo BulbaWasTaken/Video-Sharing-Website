@@ -1,0 +1,31 @@
+<header class="page-header">
+    <h1><a class="header-home-button" href="/">CSC 317 Website</a></h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/postvideo">Upload</a></li>
+            <li class="searchBar">
+                <div class='searchBarDiv'>
+                    <form class="search-register-form" id="search-form" action="/posts/search" method="get"
+                        enctype="application/x-www-form-urlencoded">
+                        <input class="search-text"type="input-text" name= "search" id = "search" placeholder="Search..." autocomplete="off">
+                        <input class="search-button" type="submit" value="Search" />
+                    </form>
+                </div>
+            </li>
+
+            {{#if isLoggedIn}}
+            <li><a href='/users/profile/{{user.userID}}'>Hi, {{user.username}}</a></li>
+            <li>
+                <form action="/users/logout" method="post">
+                    <button class="nav-items" type="submit">Log out</button>
+                </form>
+            </li>
+            {{else}}
+            <li><a class="login-button" href="/login">Login</a></li>
+            {{/if}}
+
+
+        </ul>
+    </nav>
+</header>

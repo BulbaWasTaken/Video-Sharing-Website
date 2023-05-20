@@ -1,0 +1,32 @@
+<main class="main-content">
+  <form class="upload-video-form" id="upload-form" action="/posts/create" method="POST" enctype="multipart/form-data">
+    <fieldset>
+      <legend>Upload Video</legend>
+      <div class="input-group">
+        <label for="title">Title:</label>
+        <input class="input-text" type="text" name="title" id="title" placeholder="Title" autocomplete="off" />
+
+        <label for="description">Description:</label>
+        <input class="input-text" type="text" name="description" id="description" placeholder="Description"
+          autocomplete="off" />
+
+        <div class="upload-video-section">
+          <fieldset class="upload-video-fieldset">
+            <legend class="upload-video-legend">Video</legend>
+            <label for="video">Upload Video:</label>
+            <input type="file" name="uploadVideo" id="video" />
+          </fieldset>
+        </div>
+
+      </div>
+      <div class="checkbox-group">
+        <label>
+          <input type="checkbox" name="agreeAcceptableUse" id="agreeAcceptableUse" />
+          I agree to the
+          <a href="#">Acceptable Use Policy</a>.
+        </label>
+      </div>
+    </fieldset>
+    <div class="submit-buttons"><input class="form-button" type="submit" value="Upload" /></div>
+  </form>
+</main>
